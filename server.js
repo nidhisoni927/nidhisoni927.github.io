@@ -7,7 +7,7 @@ const port = 3000;
 // Create an HTTP server
 const server = http.createServer((req, res) => {
     // Get the file path based on the request URL
-    const filePath = path.join(__dirname, 'doc', req.url === '/' ? 'index.html' : req.url);
+    const filePath = path.join(__dirname, 'docs', req.url === '/' ? 'index.html' : req.url);
 
     // Read the content of the file
     fs.readFile(filePath, (err, data) => {
